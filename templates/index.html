@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* CSS code here */
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        height: 100vh;
+        background-color: #96f6bb;
+      }
+
+      .heading {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .heading h1 {
+        color: #545454fa; /* Dark green font color */
+        font-size: 60px; /* Increased font size */
+        font-family: "Arial", sans-serif; /* Change the font family to Arial or any other preferred font */
+        font-weight: bold; /* Add a bold font weight */
+        letter-spacing: 2px;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 70px;
+      }
+
+      .search-box {
+        display: flex;
+        align-items: center;
+        width: 30%;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        border-radius: 5px 0 0 5px;
+        border: 1px solid #ccc;
+        width: 60%;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 0 5px 5px 0;
+        border: 1px solid #4caf50;
+        cursor: pointer;
+        width: 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">
+      <h1>Search for the Live News....</h1>
+    </div>
+    <div class="container">
+      <form class="search-box" action="/search" method="post">
+        <input type="text" placeholder="Search..." name="search" />
+        <input type="submit" value="Search" />
+      </form>
+    </div>
+  </body>
+</html>
