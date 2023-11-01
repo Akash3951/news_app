@@ -1,5 +1,5 @@
 from flask import Flask,render_template, request
-import requests
+import requests, datetime
 
 app = Flask(__name__)
 
@@ -9,9 +9,13 @@ def show_home():
 
 @app.route("/search", methods=['POST', 'GET'])
 def home():
+    current_date = datetime.datetime.now().date()
+    date = current_date - datetime.timedelta(days=2)
+    print(date)
     url = "https://newsapi.org/v2/everything"
     param = {
         'q':request.form.get('search'),
+        'from':date,
         'sortBy':'popularity',
         'apiKey':'319f1986331947aa99f4dcb9ad51befd'
     }
